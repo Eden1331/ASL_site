@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> L'alphabet en langue des signes</title>
+        <link rel="stylesheet" href="stylee.css">
+</head>
+<body class="theme-asl">
+
+    <nav>
+        <div class="logo">Maîtrisez l'alphabet ! </div>
+        <ul>
+            <li><a href="#" onclick="showSection('asl')">ASL</a></li>
+            <li><a href="#" onclick="showSection('bsl')">BSL</a></li>
+            <li><a href="#" onclick="showSection('quiz-setup')">QUIZ</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+
+        <section id="learning-section">
+            <h1 id="lang-title"> Alphabet ASL</h1>
+            <div id="alphabet-grid" class="grid"></div>
+        </section>
+
+        <section id="quiz-setup" style="display: none;">
+            <h1>Paramètres du quiz</h1>
+            <p>Quiz en :</p>
+            <div class="options-grid">
+                <button onclick="startQuiz(10)">10 Questions</button>
+                <button onclick="startQuiz(20)">20 Questions</button>
+            </div>
+        </section>
+
+        <section id="quiz-game" style="display: none;">
+            <div id="question-container">
+                <p> Question <span id="current-q">1</span> / <span id="total-q"> 10</span></p>
+                <div class="quiz-card">
+                    <img id="quiz-image" src="" alt="Signe à deviner" style="max-width: 250px; border-radius: 10px;">
+                </div>
+                <div id="options" class="options-grid"></div>
+            </div>
+        </section>
+
+        <section id="results" style="display: none;">
+            <h2>Résultats</h2>
+            <div id="score-display"></div>
+            <div id="feedback-list"></div>
+            <button onclick="showSection('quiz-setup')" style="margin-top: 50px;">Rejouer</button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
